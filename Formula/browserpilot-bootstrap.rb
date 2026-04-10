@@ -2,16 +2,21 @@ class BrowserpilotBootstrap < Formula
   desc "Minimal BrowserPilot local bootstrap"
   homepage "https://browserpilot.seedsource.dev/install"
   url "https://browserpilot.seedsource.dev/releases/browserpilot-bootstrap-2.1.3.tgz"
-  sha256 "2716c56d0b7f443e3486b5e8d4555f8a82df482239dda548833af24e4273ffbc"
+  sha256 "702e38ed776cfa6ec4c5931983b9cb11064c97e3763665f8569d3081901f6e8b"
   license "Commercial"
 
   depends_on "node"
 
   def install
     libexec.install Dir["*"]
-    (bin/"browserpilot-bootstrap").write_env_script libexec/"bin/browserpilot-bootstrap.js", {
-      "PATH" => "#{Formula["node"].opt_bin}:$PATH"
-    }
+    (bin/"browserpilot-bootstrap").write <<~EOS
+      #!/bin/bash
+      if [ -x "#{Formula["node"].opt_bin}/node" ]; then
+        exec "#{Formula["node"].opt_bin}/node" "#{libexec}/bin/browserpilot-bootstrap.js" "$@"
+      fi
+      exec node "#{libexec}/bin/browserpilot-bootstrap.js" "$@"
+    EOS
+    chmod 0755, bin/"browserpilot-bootstrap"
   end
 
   test do
