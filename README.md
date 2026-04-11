@@ -1,20 +1,16 @@
-# BrowserPilot Homebrew Tap (Local Review)
+# BrowserPilot Tap Review (Secondary Distribution Path)
 
-This repository is prepared locally for manual review before any public release.
+This repository is retained only as a secondary distribution path.
+Primary public bootstrap distribution is npm-first via `@browser-pilot/cli`.
 
 ## Current State
 - Formula file is present in Formula/browserpilot-bootstrap.rb.
 - No remote is configured by this setup.
 - No push/publish actions were executed.
+- This repo should trail the npm release rather than lead it.
 
-## Local Test Command
-Run this from any machine with Homebrew:
-
-```bash
-brew install --formula ./Formula/browserpilot-bootstrap.rb
-browserpilot-bootstrap --help
-browserpilot-bootstrap install
-```
+## Secondary Review
+Validate this repo only after the npm release, install-page copy, and activation-server release artifact are already aligned.
 
 ## Publish Is Manual (Not Performed)
 Only after review:

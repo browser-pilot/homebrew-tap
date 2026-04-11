@@ -1,5 +1,7 @@
 # Review Checklist Before Any Public Publish
 
+This repository is now a secondary distribution path. BrowserPilot's primary public bootstrap distribution is npm-first via `@browser-pilot/cli`, and any tap publish should trail the npm release rather than lead it.
+
 ## Security
 - [ ] Formula URL points only to https://browserpilot.seedsource.dev/releases/
 - [ ] Formula does not include extension or bridge source files
