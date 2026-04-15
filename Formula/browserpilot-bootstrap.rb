@@ -1,8 +1,8 @@
 class BrowserpilotBootstrap < Formula
   desc "Minimal BrowserPilot local bootstrap"
   homepage "https://browserpilot.seedsource.dev/install"
-  url "https://browserpilot.seedsource.dev/releases/browser-pilot-cli-3.1.1.tgz"
-  sha256 "bf0f5a06bf445f067300ab0be704ce3194f50a8b541e0b282610dce780fe8878"
+  url "https://browserpilot.seedsource.dev/releases/browser-pilot-cli-4.0.0.tgz"
+  sha256 "83c8debc592010c0f611cb392a5b09ed3f693e35589856a1f81f2a9588321396"
   license "Commercial"
 
   depends_on "node"
