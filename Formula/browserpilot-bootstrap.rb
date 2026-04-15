@@ -17,6 +17,7 @@ class BrowserpilotBootstrap < Formula
       exec node "#{libexec}/bin/browserpilot-bootstrap.js" "$@"
     EOS
     chmod 0755, bin/"browserpilot-bootstrap"
+    bin.install_symlink bin/"browserpilot-bootstrap" => "browserpilot"
   end
 
   test do
