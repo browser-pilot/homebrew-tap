@@ -1,8 +1,8 @@
 class BrowserpilotBootstrap < Formula
   desc "Minimal BrowserPilot local bootstrap"
   homepage "https://browserpilot.seedsource.dev/install"
-  url "https://browserpilot.seedsource.dev/releases/browser-pilot-cli-4.0.1.tgz"
-  sha256 "9d0dba2873dce5571793307d365dbe3e685d93469245e9696e75a351d24a0ba3"
+  url "https://browserpilot.seedsource.dev/releases/browser-pilot-cli-4.0.2.tgz"
+  sha256 "95ee34a41650db5665e779de38bcefabea8f9b9feae40cd991803b993715b3f7"
   license "Commercial"
 
   depends_on "node"
@@ -17,7 +17,6 @@ class BrowserpilotBootstrap < Formula
       exec node "#{libexec}/bin/browserpilot-bootstrap.js" "$@"
     EOS
     chmod 0755, bin/"browserpilot-bootstrap"
-    bin.install_symlink bin/"browserpilot-bootstrap" => "browserpilot"
   end
 
   test do
