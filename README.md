@@ -5,7 +5,7 @@ Canonical buyer entry is `https://browserpilot.seedsource.dev/install`. Homebrew
 
 ## Current State
 - Formula file is present in Formula/browserpilot-bootstrap.rb.
-- No remote is configured by this setup.
+- Remote is configured to `https://github.com/browser-pilot/homebrew-tap.git`.
 - No push/publish actions were executed.
 - This repo should trail the BrowserPilot install flow and any approved bootstrap release, not lead them.
 
@@ -14,6 +14,5 @@ Validate this repo only after the npm release, install-page copy, and activation
 
 ## Publish Is Manual (Not Performed)
 Only after review:
-1. Add remote manually.
-2. Commit reviewed files.
-3. Push intentionally.
+1. Commit reviewed files.
+2. Push intentionally.

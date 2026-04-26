@@ -15,6 +15,6 @@ This repository is now a secondary distribution path. BrowserPilot's primary pub
 - [ ] `browserpilot-bootstrap install` works on clean macOS
 
 ## Non-Public Guard
-- [ ] Confirm this repo still has no remote or no public remote
+- [ ] Confirm the configured remote is still the intended `browser-pilot/homebrew-tap` repository
 - [ ] Confirm no push has occurred
 - [ ] Confirm manual approval completed before any publish action
